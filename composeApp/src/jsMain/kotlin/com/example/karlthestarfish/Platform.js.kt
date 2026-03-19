@@ -5,3 +5,5 @@ class JsPlatform : Platform {
 }
 
 actual fun getPlatform(): Platform = JsPlatform()
+
+actual fun getOpenAiApiKey(): String = js("process.env.OPENAI_API_KEY || ''") as String

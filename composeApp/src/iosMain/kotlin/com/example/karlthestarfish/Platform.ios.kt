@@ -7,3 +7,5 @@ class IOSPlatform : Platform {
 }
 
 actual fun getPlatform(): Platform = IOSPlatform()
+
+actual fun getOpenAiApiKey(): String = "" // iOS would need secure keychain storage implementation

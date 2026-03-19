@@ -62,6 +62,39 @@ Karl occasionally references humorous phrases "as told by cousin Patrick," but s
 
 ---
 
+## AI API Setup (Optional)
+
+Karl can now use OpenAI's GPT-3.5-Turbo for more intelligent and context-aware responses! This is **optional** - Karl works great with local responses too.
+
+### Getting an API Key
+
+1. Sign up at [OpenAI](https://openai.com/api/)
+2. Create a new API key in your dashboard
+3. Note: API usage may incur costs - check OpenAI's pricing
+
+### Setting the API Key
+
+#### Desktop (JVM) & Android
+```bash
+export OPENAI_API_KEY=your_api_key_here
+./gradlew :composeApp:run
+```
+
+#### Web (JS)
+Set in your environment before building, or use a custom implementation.
+
+#### iOS
+For iOS, implement secure keychain storage in `Platform.ios.kt`.
+
+### Without API Key
+
+If no API key is provided, Karl uses enhanced local responses with:
+- 40+ pre-written responses covering all personality aspects
+- Pattern matching for greetings, family mentions, UNSS topics
+- Conversation context awareness
+
+---
+
 ## Installation Instructions
 
 Below are instructions for running the project on all supported targets.

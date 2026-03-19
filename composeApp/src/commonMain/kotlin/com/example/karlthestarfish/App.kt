@@ -70,11 +70,12 @@ fun App() {
             userInput = userInput,
             onUserInputChange = { userInput = it },
             onSend = { msg ->
+                if (msg.isBlank()) return@InputRow
                 // Add user message
                 messages = messages + Message(msg, true)
                 // clear input
                 userInput = ""
-                // launch Karl's reply
+                // launch Karl's reply as suspend function
                 coroutineScope.launch {
                     delay(500)
                     val karlResponse = karl.reply(msg)

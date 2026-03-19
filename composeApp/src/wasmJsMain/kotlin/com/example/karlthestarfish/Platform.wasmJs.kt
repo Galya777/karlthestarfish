@@ -5,3 +5,5 @@ class WasmPlatform : Platform {
 }
 
 actual fun getPlatform(): Platform = WasmPlatform()
+
+actual fun getOpenAiApiKey(): String = "" // Wasm would need custom implementation

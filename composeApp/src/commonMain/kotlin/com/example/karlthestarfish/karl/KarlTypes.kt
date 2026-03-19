@@ -19,5 +19,8 @@ enum class ReactionType {
     ADVICE,
     STORY,
     JOKE,
+    GREETING,
+    FAMILY,
+    UNSS,
     RANDOM
 }

@@ -7,3 +7,5 @@ class AndroidPlatform : Platform {
 }
 
 actual fun getPlatform(): Platform = AndroidPlatform()
+
+actual fun getOpenAiApiKey(): String = System.getenv("OPENAI_API_KEY") ?: ""
